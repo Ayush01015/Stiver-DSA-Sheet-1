@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-void nam(string name,int n){
+void f1(int n){
     if(n==0)
         return;
     else{
-        cout<<name<<" ";
-        nam(name,--n);
+        f1(--n);
+        cout<<n+1<<" ";
     }
 }
 int main()
@@ -13,6 +13,6 @@ int main()
     cout<<"Enter a number\n";
     int n;
     cin>>n;
-    nam("Ayush",10);
+    f1(n);
     return 0;
 }

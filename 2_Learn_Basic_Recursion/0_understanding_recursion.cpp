@@ -5,7 +5,6 @@ void f1(int n){
     return;
     else{
         cout<<n<<" ";
-        // n=n-1;
         f1(--n);
     }
 
