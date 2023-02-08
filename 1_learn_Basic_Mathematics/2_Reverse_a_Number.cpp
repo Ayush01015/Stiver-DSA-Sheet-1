@@ -11,6 +11,6 @@ int main()
         rev= rev + n%10;
         n=n/10;
     }
-    cout<<rev;
+    cout<<"Reverse : "<<rev;
     return 0;
 }
