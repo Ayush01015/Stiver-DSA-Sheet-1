@@ -11,12 +11,11 @@ int main()
     cout<<"Enter the number of time you want to search\n";
     int q;
     cin>>q;
-    char ch;
     while(q--){
+        char ch;
         cin>>ch;
         // int index = ch - 'a';
-        int index = ch;
-        cout<<ch<<"-->"<<Hash[index]<<endl;
+        cout<<ch<<"-->"<<Hash[ch]<<endl;
     }
     return 0;
 }
