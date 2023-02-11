@@ -10,6 +10,7 @@ int main()
     for(int i=0;i<n;i++)
         cin>>a[i];
     map<int,int> m;
+    //pre-Compute
     for(int i=0;i<n;i++){
         m[a[i]]++;
     }
@@ -19,7 +20,9 @@ int main()
     while(q--){
         int n;
         cin>>n;
+        //fetch
         cout<<m[n]<<endl;
     }
     return 0;
 }
+ 
