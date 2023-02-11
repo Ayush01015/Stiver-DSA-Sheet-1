@@ -16,8 +16,29 @@ int countInArray(int number,int a[]){
    */
 }
 int main()
-{
-    int a[] = {1,2,1,3,2,};
-    cout<<countInArray(1,a);
+{   
+    cout<<"Enter number of Elements\n";
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    cout<<"Elements\n";
+    for(int i=0;i<n;i++)
+        cout<<a[i]<<" ";
+        cout<<endl;
+    // cout<<countInArray(1,a);
+    int hash[100000] = {0}; //(1e5)
+    for(int i=0;i<n;i++)
+        hash[a[i]]+=1;
+    cout<<"Enter How many times you want to Count\n";
+    int q;
+    cin>>q;
+    while(q--){
+        int n;
+        cin>>n;
+        cout<<hash[n]<<endl;
+    }
     return 0;
+
 }
