@@ -5,12 +5,21 @@ int main()
 {
     int i,j,t;
     int a[] = {7,11,9,2,17,4};
-    for(i=0;i<=4;i++){
-        
+    for(i=0;i<=5;i++){
+        for(j=i+1;j>0;j--){
+            if(a[j]<a[j-1]){
+                t=a[j];
+                a[j]=a[j-1];
+                a[j-1]=t;
+            }
+        }
     }
     cout<<"Printing Array\n";
-    for(int i = 0; i < 5 ; i++){
+    for(int i = 0; i < 6 ; i++){
         cout<<a[i]<<" ";
     }
     return 0;
 }
+//stable,adaptive
+//best-->O(n)
+//wrost-->O(n^2)
