@@ -5,8 +5,8 @@ int main()
 {
     int i,j,t;
     int a[] = {7,11,9,2,17,4};
-    for(i=0;i<=4;i++){
-        for(j=0;j<=4;j++){
+    for(i=0;i<=5;i++){
+        for(j=0;j<=5;j++){
             if(a[j]>a[j+1]){
                 t=a[j];
                 a[j]=a[j+1];
@@ -15,7 +15,7 @@ int main()
         }
     }
     cout<<"Printing Array\n";
-    for(int i = 0; i < 5 ; i++){
+    for(int i = 0; i < 6 ; i++){
         cout<<a[i]<<" ";
     }
     return 0;
