@@ -21,6 +21,7 @@ int main()
             t++;
         }
     }
+    cout<<"t: "<<t<<endl;
     if (t == 0)
         cout << "\nArray is sorted";
     else
