@@ -26,7 +26,7 @@ int main()
     //     cout << a[i] << " ";
     // #logic 2:
     for(int i=0;i<n;i++)
-        temp[(i+1)%n] = a[i];
+        temp[(i+1)%n] = a[i]; 
     for (int i = 0; i < n; i++)
         a[i]=temp[i];
     for (int i = 0; i < n; i++)
