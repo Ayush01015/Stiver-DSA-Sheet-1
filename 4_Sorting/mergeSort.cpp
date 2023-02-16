@@ -13,7 +13,6 @@ void merge(int a[],int b[],int c[],int m,int n){
         }
         k++;
     }
-    // cout<<i<<j<<k<<endl;
     while(i<m){
         c[k] = a[i];
         i++;
@@ -27,7 +26,6 @@ void merge(int a[],int b[],int c[],int m,int n){
 }
 int main()
 {
-    int j,t;
     int a[] = {7,9,18,19,22};
     int b[] = {1,6,9,11,67,68,69,90};
     int c[100];
