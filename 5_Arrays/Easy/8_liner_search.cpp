@@ -6,6 +6,7 @@ int search(vector<int> v,int data){
             return i;
     return -1;
 }
+
 int main()
 {
     cout<<"Enter n: ";
@@ -24,7 +25,5 @@ int main()
     }
     cout<<endl;
     cout<<"Index: "<<search(v,5); //-1 not present
-    
-    
     return 0;
 }
