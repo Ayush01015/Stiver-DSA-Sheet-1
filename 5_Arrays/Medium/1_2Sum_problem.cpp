@@ -1,5 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
+void twoSum(vector<int> v, int target)
+{
+    int a=-1, b=-1;
+    for (int i = 0; i < v.size(); i++)
+    {
+        if (v[i] + v[(i + 1) % v.size()] == target)
+        {
+            a = i;
+            b = (i + 1) % v.size();
+            break;
+        }
+    }
+    cout << "[" << a << "," << b << "]" << endl;
+}
 
 int main()
 {
@@ -20,7 +34,7 @@ int main()
         cout << it << " ";
     }
     cout << endl;
-    
+    twoSum(v,6);
 
     return 0;
 }

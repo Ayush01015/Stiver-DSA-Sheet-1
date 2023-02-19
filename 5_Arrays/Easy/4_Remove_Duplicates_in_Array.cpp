@@ -6,7 +6,7 @@ int main()
     cout << "Enter value of N\n";
     int n;
     cin >> n;
-    int a[n]; //arr[1,1,2,2,2,3,3]
+    int a[n]; 
     int t = 0;
     cout << "Enter " << n << " values\n";
     for (int i = 0; i < n; i++)
