@@ -3,33 +3,27 @@ using namespace std;
 
 int main()
 {
-    int a1[] = {1,2,3,3,4,5,6};
-    int a2[] = {3,3,5};
-    int m = 7 , n = 3;
+    int a1[] = {1,2,3,3,4,5,6,69};
+    int a2[] = {3,5,69};
+    int m = 8 , n = 3;
     vector <int> temp;
-    vector <int> hash;
+    int hash[100000]={0};
     for(int i=0;i<m;i++){
         temp.push_back(a1[i]);
+        hash[a1[i]]+=1;
     }
     for(int i=0;i<n;i++){
         temp.push_back(a2[i]);
+        hash[a2[i]]+=1;
     }
-    for(auto it: temp){
-        cout<<it<<" ";
+    int max = *max_element(temp.begin(),temp.end());
+    vector<int> v;
+    for(int i=0;i<=max;i++){
+        if(hash[i]>1){
+            v.push_back(i);
+        }
     }
-    cout<<endl;
-    sort(temp.begin(),temp.end());
-    for(auto it: temp){
-        cout<<it<<" ";
-    }
-    vector<int>v;
-    v.push_back(temp[0]);
-    for(int i=1;i<temp.size();i++){
-        if(temp[i]==temp[i-1])
-            v.push_back(temp[i]);
-    }
-    cout<<endl;
-    for(auto it: v){
+    for(auto it:v){
         cout<<it<<" ";
     }
     return 0;
