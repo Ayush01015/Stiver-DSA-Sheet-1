@@ -2,21 +2,14 @@
 using namespace std;
 int maxOnesInSubArray(vector<int> v)  //O(n^3)
 { 
-    int  c = 0;
-    int len;
+    int  c;
+    int max=0;
     for (int i = 0; i < v.size(); i++)
     {
+        c=0;
         for (int j = i; j < v.size(); j++)
         {
-            len = 0;
-            for (int k = i; k <= j; k++)
-            {
-                if(v[i]==1)
-                   len++;
-            }
-            if (c < len)
-                c = len; //finding maximum length
-                cout<<"C: "<<c<<endl;
+            if()
         }
     }
     return c;

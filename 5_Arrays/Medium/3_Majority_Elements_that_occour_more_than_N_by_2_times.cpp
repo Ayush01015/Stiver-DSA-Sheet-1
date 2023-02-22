@@ -21,16 +21,14 @@ int main()
     {
         cout << it << " ";
     }   
-    cout << endl;
     int N = n/2;
-    for(int i=0;i<1;i++){
-        cout<<hash[i]<<" ";
-    }
+    int B=-1;
     cout << endl;
     for(int i=0;i<n;i++){
-        if(hash[i]>N)
-            cout<<"Result: "<<i<<endl;
+        if(hash[i]>(N/2))
+            B = i;
     }
+    cout<<"Result: "<<B<<endl;
     return 0;
 }
 // Input Format:  N = 10, nums[] = {4,4,2,4,3,4,4,3,2,4}
