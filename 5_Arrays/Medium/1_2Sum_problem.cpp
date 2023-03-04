@@ -1,35 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> twoSum2(vector<int>& nums, int target) {
-    vector<int> res;
-    for (int i = 0; i < nums.size(); ++i) {
-   	 for (int j = i + 1; j < nums.size(); ++j) {
-   		 if (nums[i] + nums[j] == target) {
-   			 res.emplace_back(i);
-   			 res.emplace_back(j);
-   			 break;
-   		 }
-   	 }
-   	 if (res.size() == 2)
-   		 break;
-    }
-    return res;
-}
-vector<int> twoSum(vector<int> &v,int target){
-    vector <int> t;
-    for(int i=0;i<v.size();i++){
-        for(int k=i+1;k<v.size();k++){
-            if(target-v[i]==v[k]){
-                t.push_back(i);
-                t.push_back(k);
-                break;
-            }
-        }
-    }
-    return t;
+// vector<int> twoSum(vector<int> &v,int target){
+//     vector <int> t;
+//     for(int i=0;i<v.size();i++){
+//         for(int k=i+1;k<v.size();k++){
+//             if(target-v[i]==v[k]){
+//                 t.push_back(i);
+//                 t.push_back(k);
+//                 break;
+//             }
+//         }
+//     }
+//     return t;
+// }
 
+vector <int> twoSum(vector<int> &v,int target){
+    vector <int> ans;
+    unordered_map<int,int> mpp;
+    for(int i=0;i<v.size();i++){
+        if(mpp.find(target-v[i])!=mpp.end()){
+            ans.push_back(mpp[target-v[i]]);
+            ans.push_back(i);
+            return ans;
+        }
+        mpp[v[i]]=i;
+    }
+    return ans;
 }
+
 int main()
 {
     cout << "Enter n: ";
@@ -49,13 +48,13 @@ int main()
         cout << it << " ";
     }
     cout << endl;
-    // twoSum(v,10);
     vector <int> c;
-    c=twoSum(v,14);
-    for(auto it:c){
-        cout<<it<<" ";
-    }
-
-
+    c=twoSum(v,9);
+    if(c.size()==0)
+        cout<<0;
+    else
+        for(auto it:c){
+            cout<<it<<" ";
+        }
     return 0;
 }
