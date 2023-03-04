@@ -16,6 +16,20 @@ vector<int> twoSum2(vector<int>& nums, int target) {
     }
     return res;
 }
+vector<int> twoSum(vector<int> &v,int target){
+    vector <int> t;
+    for(int i=0;i<v.size();i++){
+        for(int k=i+1;k<v.size();k++){
+            if(target-v[i]==v[k]){
+                t.push_back(i);
+                t.push_back(k);
+                break;
+            }
+        }
+    }
+    return t;
+
+}
 int main()
 {
     cout << "Enter n: ";
@@ -37,7 +51,7 @@ int main()
     cout << endl;
     // twoSum(v,10);
     vector <int> c;
-    c=twoSum2(v,10);
+    c=twoSum(v,14);
     for(auto it:c){
         cout<<it<<" ";
     }
