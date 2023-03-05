@@ -22,27 +22,18 @@ int main()
     }
     cout << endl;
     // Brute Force I O(n^3)
-    // int sum = 0, temp;
-    // for(int i=0;i<n;i++){
-    //     for(int j=i;j<n;j++){
-    //         temp=0;
-    //         for(int k=i;k<=j;k++){
-    //             temp = temp + v[k];
-    //         }
-    //         if(sum<temp)
-    //             sum=temp;
-    //     }
-    // }
-    // Brute Force II O(n^2)
-    int sum=0,temp=0;
+    int sum = 0, temp;
     for(int i=0;i<n;i++){
-        temp = 0;
         for(int j=i;j<n;j++){
-            temp = temp +v[j];
+            temp=0;
+            for(int k=i;k<=j;k++){
+                temp = temp + v[k];
+            }
+            if(sum<temp)
+                sum=temp;
         }
-        // if(sum<temp)
-        //     sum=temp;
     }
+
     cout<<"Sum: "<<temp<<endl;
 
     return 0;
