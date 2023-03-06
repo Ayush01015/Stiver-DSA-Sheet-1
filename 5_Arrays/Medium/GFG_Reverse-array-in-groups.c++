@@ -3,7 +3,6 @@ using namespace std;
 void reverseInGroups(vector<long long> &arr, int n, int k)
 {
     int a = 0;
-    int rem = n % k;
     int pair = n / k;
     auto it = arr.begin();
     auto end = arr.end();
@@ -12,8 +11,6 @@ void reverseInGroups(vector<long long> &arr, int n, int k)
         reverse(it + a, it + (a + k));
         a = a + k;
     }
-    cout<<"-->"<<(a+k)<<endl;
-    cout<<"-->"<<(a-k)<<endl;
     reverse(it+(a),end);
 }
 int main()
