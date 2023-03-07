@@ -51,6 +51,7 @@ int main()
                 break;
         }
     }
+    
     cout << "Sorted Elements are: ";
     for (auto it : v)
     {
