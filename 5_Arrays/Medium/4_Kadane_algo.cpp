@@ -22,19 +22,35 @@ int main()
     }
     cout << endl;
     // Brute Force I O(n^3)
-    int sum = 0, temp;
+    // int sum = 0, temp;
+    // for(int i=0;i<n;i++){
+    //     for(int j=i;j<n;j++){
+    //         temp=0;
+    //         for(int k=i;k<=j;k++){
+    //             temp = temp + v[k];
+    //         }
+    //         if(sum<temp)
+    //             sum=temp;
+    //     }
+    // }
+
+    //O(n)
+    int maxi=v[0];
+    int sum = 0;
     for(int i=0;i<n;i++){
-        for(int j=i;j<n;j++){
-            temp=0;
-            for(int k=i;k<=j;k++){
-                temp = temp + v[k];
-            }
-            if(sum<temp)
-                sum=temp;
-        }
+        sum = sum + v[i];
+        maxi = max(maxi,sum);
+        if(sum<0)
+            sum=0;
     }
-
-    cout<<"Sum: "<<temp<<endl;
-
+    cout<<"Sum: "<<maxi<<endl;
     return 0;
 }
+
+/** KADANE ALGORITHM O(1)
+ * 1. maxi = v[0] and sum = 0
+ * 2. calculate sum --> sum = sum + v[i];
+ * 3. find max between maxi = (max,sum)
+ * 4. if sum<0 (negative) then sum = 0.
+ */
+
