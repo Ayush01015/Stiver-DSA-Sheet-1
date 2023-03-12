@@ -1,20 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
-int maxOnesInSubArray(vector<int> v) 
-{ 
-    
-    int res=0;
+// int maxOnesInSubArray(vector<int> v)
+// {
+
+//     int res=0;
+//     for (int i = 0; i < v.size(); i++)
+//     {
+//        int c=0;
+//         for (int j = i; j < v.size(); j++)
+//         {
+//             if(v[j]==1)
+//                 c++;
+//             else
+//                 break;
+//         }
+//         res=max(c,res);
+//     }
+//     return res;
+// }
+int maxOnesInSubArray(vector<int> v)
+{
+
+    int c, res = 0;
     for (int i = 0; i < v.size(); i++)
     {
-       int c=0;
-        for (int j = i; j < v.size(); j++)
+        if (v[i] == 0)
+            c = 0;
+        else
         {
-            if(v[j]==1)
-                c++;
-            else
-                break;
+            c++;
+            res=max(res,c);
         }
-        res=max(c,res);
     }
     return res;
 }
