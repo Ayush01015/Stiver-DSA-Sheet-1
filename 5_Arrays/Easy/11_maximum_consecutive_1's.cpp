@@ -1,18 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
-int maxOnesInSubArray(vector<int> v)  //O(n^3)
+int maxOnesInSubArray(vector<int> v) 
 { 
-    int  c;
-    int max=0;
+    
+    int res=0;
     for (int i = 0; i < v.size(); i++)
     {
-        c=0;
+       int c=0;
         for (int j = i; j < v.size(); j++)
         {
-            if()
+            if(v[j]==1)
+                c++;
+            else
+                break;
         }
+        res=max(c,res);
     }
-    return c;
+    return res;
 }
 int main()
 {
