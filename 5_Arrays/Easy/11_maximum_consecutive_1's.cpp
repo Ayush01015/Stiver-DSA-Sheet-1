@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-// int maxOnesInSubArray(vector<int> v)
-// {
+// int maxOnesInSubArray(vector<int> v) //O(N^2)
+// { 
 
 //     int res=0;
 //     for (int i = 0; i < v.size(); i++)
@@ -18,7 +18,7 @@ using namespace std;
 //     }
 //     return res;
 // }
-int maxOnesInSubArray(vector<int> v)
+int maxOnesInSubArray(vector<int> v) //O(N)
 {
 
     int c, res = 0;
