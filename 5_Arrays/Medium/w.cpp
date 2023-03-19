@@ -1,16 +1,41 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+
+int equilibrium(vector<int> &v){
+    for(int i=0;i<v.size();i++){
+        int rE = 0, lE = 0;
+        for(int j=0;j<i;j++){
+            rE=rE+v[j];
+        }
+        for(int k=i+1;k<v.size();k++)
+            lE=lE+v[k];
+        if(lE==rE)
+            return true;
+    }
+    return false;
+}
 
 int main()
 {
-    int n = 5;
-    int arr[] = {4,0,2,1,3};
-    vector <int> temp(n);
-    for(int i=0;i<n;i++)
-        temp[i]=arr[arr[i]];
-    for(int i=0;i<n;i++)
-        arr[i]=temp[i];
-    for(int i=0;i<n;i++)
-        cout<<arr[i]<<" ";
+    cout << "Enter n: ";
+    int n;
+    cin >> n;
+    vector<int> v;
+    cout << "Enter " << n << " values" << endl;
+    int l;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> l;
+        v.push_back(l);
+    }
+    cout << "Elements are: ";
+    for (auto it : v)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+    cout<<"res: "<<equilibrium(v);
     return 0;
 }
+
+
